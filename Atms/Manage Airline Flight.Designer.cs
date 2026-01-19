@@ -13,10 +13,15 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing)
             {
-                components.Dispose();
+                // Dispose of any managed resources if needed
+                if (components != null)
+                {
+                    components.Dispose();
+                }
             }
+            // Always call the base class Dispose to ensure proper cleanup
             base.Dispose(disposing);
         }
 
@@ -39,17 +44,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtDepartureTime = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAddFlight = new System.Windows.Forms.Button();
-            this.btnUpdateFlight = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.btnDeleteFlight = new System.Windows.Forms.Button();
-            this.btnSearchFlight = new System.Windows.Forms.Button();
-            this.dgvFlightList = new System.Windows.Forms.DataGridView();
-            this.colAirlineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFlightCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDepartureTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFlightList)).BeginInit();
+            this.btnAddFlight = new System.Windows.Forms.Button();
+            this.btnviewbooking = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -142,35 +140,23 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Departure Time :";
             // 
-            // btnAddFlight
+            // btnlogout
             // 
-            this.btnAddFlight.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnAddFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFlight.Location = new System.Drawing.Point(150, 343);
-            this.btnAddFlight.Name = "btnAddFlight";
-            this.btnAddFlight.Size = new System.Drawing.Size(122, 42);
-            this.btnAddFlight.TabIndex = 10;
-            this.btnAddFlight.Text = "Add";
-            this.btnAddFlight.UseVisualStyleBackColor = false;
-            this.btnAddFlight.Click += new System.EventHandler(this.btnAddFlight_Click);
-            // 
-            // btnUpdateFlight
-            // 
-            this.btnUpdateFlight.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnUpdateFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateFlight.Location = new System.Drawing.Point(436, 343);
-            this.btnUpdateFlight.Name = "btnUpdateFlight";
-            this.btnUpdateFlight.Size = new System.Drawing.Size(122, 42);
-            this.btnUpdateFlight.TabIndex = 11;
-            this.btnUpdateFlight.Text = "Update";
-            this.btnUpdateFlight.UseVisualStyleBackColor = false;
-            this.btnUpdateFlight.Click += new System.EventHandler(this.btnUpdateFlight_Click);
+            this.btnlogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnlogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogout.Location = new System.Drawing.Point(1005, 12);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(93, 39);
+            this.btnlogout.TabIndex = 15;
+            this.btnlogout.Text = "Log Out";
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // btnDeleteFlight
             // 
             this.btnDeleteFlight.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDeleteFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteFlight.Location = new System.Drawing.Point(682, 343);
+            this.btnDeleteFlight.Location = new System.Drawing.Point(693, 349);
             this.btnDeleteFlight.Name = "btnDeleteFlight";
             this.btnDeleteFlight.Size = new System.Drawing.Size(122, 42);
             this.btnDeleteFlight.TabIndex = 12;
@@ -178,68 +164,29 @@
             this.btnDeleteFlight.UseVisualStyleBackColor = false;
             this.btnDeleteFlight.Click += new System.EventHandler(this.btnDeleteFlight_Click);
             // 
-            // btnSearchFlight
+            // btnAddFlight
             // 
-            this.btnSearchFlight.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSearchFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchFlight.Location = new System.Drawing.Point(919, 343);
-            this.btnSearchFlight.Name = "btnSearchFlight";
-            this.btnSearchFlight.Size = new System.Drawing.Size(122, 42);
-            this.btnSearchFlight.TabIndex = 13;
-            this.btnSearchFlight.Text = "Search";
-            this.btnSearchFlight.UseVisualStyleBackColor = false;
-            this.btnSearchFlight.Click += new System.EventHandler(this.btnSearchFlight_Click);
+            this.btnAddFlight.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAddFlight.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFlight.Location = new System.Drawing.Point(279, 349);
+            this.btnAddFlight.Name = "btnAddFlight";
+            this.btnAddFlight.Size = new System.Drawing.Size(122, 42);
+            this.btnAddFlight.TabIndex = 10;
+            this.btnAddFlight.Text = "Add";
+            this.btnAddFlight.UseVisualStyleBackColor = false;
+            this.btnAddFlight.Click += new System.EventHandler(this.btnAddFlight_Click);
             // 
-            // dgvFlightList
+            // btnviewbooking
             // 
-            this.dgvFlightList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFlightList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colAirlineName,
-            this.colFlightCode,
-            this.colFrom,
-            this.colTo,
-            this.colDepartureTime});
-            this.dgvFlightList.Location = new System.Drawing.Point(150, 434);
-            this.dgvFlightList.Name = "dgvFlightList";
-            this.dgvFlightList.RowHeadersWidth = 51;
-            this.dgvFlightList.RowTemplate.Height = 24;
-            this.dgvFlightList.Size = new System.Drawing.Size(891, 209);
-            this.dgvFlightList.TabIndex = 14;
-            // 
-            // colAirlineName
-            // 
-            this.colAirlineName.HeaderText = "Airline Name";
-            this.colAirlineName.MinimumWidth = 6;
-            this.colAirlineName.Name = "colAirlineName";
-            this.colAirlineName.Width = 125;
-            // 
-            // colFlightCode
-            // 
-            this.colFlightCode.HeaderText = "Flight Code";
-            this.colFlightCode.MinimumWidth = 6;
-            this.colFlightCode.Name = "colFlightCode";
-            this.colFlightCode.Width = 125;
-            // 
-            // colFrom
-            // 
-            this.colFrom.HeaderText = "From";
-            this.colFrom.MinimumWidth = 6;
-            this.colFrom.Name = "colFrom";
-            this.colFrom.Width = 125;
-            // 
-            // colTo
-            // 
-            this.colTo.HeaderText = "To";
-            this.colTo.MinimumWidth = 6;
-            this.colTo.Name = "colTo";
-            this.colTo.Width = 125;
-            // 
-            // colDepartureTime
-            // 
-            this.colDepartureTime.HeaderText = "Departure Time";
-            this.colDepartureTime.MinimumWidth = 6;
-            this.colDepartureTime.Name = "colDepartureTime";
-            this.colDepartureTime.Width = 129;
+            this.btnviewbooking.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnviewbooking.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnviewbooking.Location = new System.Drawing.Point(429, 450);
+            this.btnviewbooking.Name = "btnviewbooking";
+            this.btnviewbooking.Size = new System.Drawing.Size(256, 55);
+            this.btnviewbooking.TabIndex = 16;
+            this.btnviewbooking.Text = "View Booking List";
+            this.btnviewbooking.UseVisualStyleBackColor = false;
+            this.btnviewbooking.Click += new System.EventHandler(this.btnviewbooking_Click);
             // 
             // Manage_Airline_Flight
             // 
@@ -248,10 +195,9 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1132, 717);
-            this.Controls.Add(this.dgvFlightList);
-            this.Controls.Add(this.btnSearchFlight);
+            this.Controls.Add(this.btnviewbooking);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnDeleteFlight);
-            this.Controls.Add(this.btnUpdateFlight);
             this.Controls.Add(this.btnAddFlight);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDepartureTime);
@@ -264,9 +210,9 @@
             this.Controls.Add(this.txtAirlineName);
             this.Controls.Add(this.label1);
             this.Name = "Manage_Airline_Flight";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage_Airline_Flight";
             this.Load += new System.EventHandler(this.Manage_Airline_Flight_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFlightList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,15 +230,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker txtDepartureTime;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAddFlight;
-        private System.Windows.Forms.Button btnUpdateFlight;
+        private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Button btnDeleteFlight;
-        private System.Windows.Forms.Button btnSearchFlight;
-        private System.Windows.Forms.DataGridView dgvFlightList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAirlineName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFlightCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFrom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDepartureTime;
+        private System.Windows.Forms.Button btnAddFlight;
+        private System.Windows.Forms.Button btnviewbooking;
     }
 }

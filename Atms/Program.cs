@@ -16,8 +16,10 @@ namespace Atms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            Application.Run(new Manage_user());
+            Application.Run(new Form1());
+            //Application.Run(new Manage_user());
+            //Application.Run(new Manage_Airline_Flight());
+            //Application.Run(new Register_Form()); 
         }
     }
 }
