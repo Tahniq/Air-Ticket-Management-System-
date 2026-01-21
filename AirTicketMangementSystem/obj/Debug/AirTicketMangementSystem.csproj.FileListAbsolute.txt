@@ -1,0 +1,15 @@
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\bin\Debug\AirTicketMangementSystem.exe.config
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\bin\Debug\AirTicketMangementSystem.exe
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\bin\Debug\AirTicketMangementSystem.pdb
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.csproj.AssemblyReference.cache
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.Form1.resources
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.Properties.Resources.resources
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.csproj.GenerateResource.cache
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.csproj.CoreCompileInputs.cache
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.exe
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.pdb
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.exe.config
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.Flight.resources
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.Booking.resources
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.Payment.resources
+D:\C#\AirTicketMangementSystem\AirTicketMangementSystem\obj\Debug\AirTicketMangementSystem.Refund.resources
